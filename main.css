@@ -1,0 +1,98 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  color: #f9f9f9;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+}
+
+.content {
+  position: relative;
+}
+
+h1 {
+  font-family: 'Short Stack';
+  font-size: 40px;
+  text-align: center;
+  position: absolute;
+  top: -140px;
+  width: 100%;
+}
+
+.tictactoe-board {
+  width: 280px;
+  height: 280px;
+}
+
+.tictactoe-cell {
+  float: left;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tictactoe-cell:nth-child(1),
+.tictactoe-cell:nth-child(2),
+.tictactoe-cell:nth-child(3),
+.tictactoe-cell:nth-child(4),
+.tictactoe-cell:nth-child(5),
+.tictactoe-cell:nth-child(6) {
+  border-bottom: 5px solid #222;
+}
+
+.tictactoe-cell:nth-child(1),
+.tictactoe-cell:nth-child(2),
+.tictactoe-cell:nth-child(4),
+.tictactoe-cell:nth-child(5),
+.tictactoe-cell:nth-child(7),
+.tictactoe-cell:nth-child(8) {
+  border-right: 5px solid #222;
+}
+
+.tictactoe-turn {
+  position: relative;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.x::before, .x::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  content: "";
+  width: 8px;
+  height: 70px;
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+.x::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.x::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.o::after {
+  display: block;
+  transform: translate(-50%, -50%);
+  content: "";
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 50%;
+  border: solid 7px #f1c40f;
+  width: 44px;
+  height: 44px;
+}
